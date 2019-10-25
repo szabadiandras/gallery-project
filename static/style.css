@@ -1,7 +1,35 @@
 body {
-  background: radial-gradient(#e66465, #9198e5);
+  display: flex;
+  background: radial-gradient(white, grey);
 }
 
 h1 {
-  color: red;
+  font-family: Montserrat, sans-serif;
+  align-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  height: 500px;
+  min-width: 200px;
+}
+
+.first {
+  background: white;
+  flex-grow: 1;
+}
+
+.second {
+  background: darkslategrey;
+  flex-grow: 5;
+}
+
+.third {
+  background: white;
+  flex-grow: 1;
 }

@@ -6,7 +6,7 @@ const app = express();
 //   {url: }
 // ]
 
-app.use(express.static('./static/style.css'));
+app.use(express.static('static'));
 
 app.set('view engine', 'ejs');
 
