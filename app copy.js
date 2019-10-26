@@ -15,18 +15,15 @@ const images = [
 
 for (let i = 0; i <= images.length-1; i++) {
   console.log('File' + (i+1) + ' : ' + images[i].name);
-  
-  app.get('/', (req, res) => {
-    req.query.name;
-    res.render('index.ejs', { name: i});
-  });
-
 }
 
 app.use(express.static('static'));
 
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
 
 app.listen(PORT, () => {
   console.log(`\n*** Server is running ***\nAccess at localhost:${PORT}`);
