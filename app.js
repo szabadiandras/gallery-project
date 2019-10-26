@@ -11,18 +11,23 @@ const images = [
   {url: "./static/assets/icons/6.jpeg", name: "Desert", description: "During the day the temperature in the desert can be extremely high", thumbnail: "../thumbnail/1.jpg"},
   {url: "./static/assets/icons/7.jpeg", name: "Night Desert", description: "At night in the desert the temperature decreases vastly", thumbnail: "../thumbnail/1.jpg"},
   {url: "./static/assets/icons/8.jpg", name: "Pacific Ocean", description: "The strong wids create extremely strong waves", thumbnail: "../thumbnail/1.jpg"}
-]
+];
+
+for (let i = 0; i <= images.length-1; i++) {
+
+  console.log('File' + (i+1) + ' : ' + images[i].name);
+}
 
 app.use(express.static('static'));
 
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index.ejs');
+  res.render('index.ejs', {name: 'Text'});
 });
 
 app.listen(PORT, () => {
-  console.log(`\n*** Server is running ***\nListening on port ${PORT}`);
+  console.log(`\n*** Server is running ***\nAccess at localhost:${PORT}`);
 });
 
 //object

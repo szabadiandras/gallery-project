@@ -64,7 +64,7 @@ h1 {
   height: 75px;
   width: 75px;
   margin: 15px 15px 0 0;
-  border-radius: 8px;
+  border-radius: 15px;
 
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.42);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.42);
@@ -92,7 +92,7 @@ a:hover {
 }
 
 /*
-#triangle {
+#pointer {
   width: 0;
   height: 0;
   border-left: 40px solid transparent;
@@ -102,20 +102,23 @@ a:hover {
   justify-content: center;
 }
 
-#triangle:hover {
+#hover:hover {
   margin: -15px;
 }
 */
-
 li:hover {
   cursor: pointer;
   border: 5px solid darkgrey;
-  float: bottom;
-  margin: 5px;
+  /*
+  float: top;
+  margin: -5px;
   -webkit-transition: margin 0.2s ease-out;
+  */
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.42);
 }
-
 li {
   border: 5px solid lightgrey;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
 }
