@@ -79,6 +79,7 @@ h1 {
 a:hover {
   filter: invert(15%);
   cursor: pointer;
+  alt: visible;
 }
 
 .right:hover {
@@ -116,9 +117,23 @@ li:hover {
   */
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.42);
 }
+
 li {
   border: 5px solid lightgrey;
-  border-radius: 8px;
+  border-radius: 15px;
   align-items: center;
   justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.thumbimg {
+  border-radius: 10px;
+}
+
+.thumbimg:hover{
+  filter: invert(10%);
 }

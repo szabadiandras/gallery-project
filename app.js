@@ -18,7 +18,7 @@ for (let i = 0; i <= images.length-1; i++) {
   
   app.get('/', (req, res) => {
     req.query.name;
-    res.render('index.ejs', { name: i});
+    res.render('index.ejs', { name: images[i].name});
   });
 
 }
