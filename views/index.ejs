@@ -12,34 +12,58 @@
 
 <body>
 
-
   <div class="container">
 
+    <!-- Previous -->
+
     <a href="">
-      <div class="item left">
+      <div class="item left" , onclick=<%=previous%>, title="Click for previous photo">
         <img border="0" alt="Back" src="../assets/icons/arrow.svg" width="50" height="50">
       </div>
     </a>
 
+    <!-- Main Content Area -->
+
     <div class="item middle">
-      <img border="0" alt="Back" src="../assets/images/1.jpg">
-      <div class="textholder"></div>
+      <img border="0" alt="<%=name%>" src="../assets/images/<%=imgindex%>.jpg" class="middleimg">
     </div>
 
-    <a href="">
-      <div class="item right">
-        <img border="0" alt="Forward" src="../assets/icons/arrow.svg" style="transform:rotate(180deg);" width="50" height="50">
-      </div>
+    <div class="textholder">
+      <h3><%=name%></h3>
+      <p><%=description%></p>
+    </div>
 
+    <!-- Next -->
+
+    <a href="">
+      <div class="item right" , onclick=<%=next%>, title="Click for next photo">
+        <img border="0" alt="Forward" src="../assets/icons/arrow.svg" style="transform:rotate(180deg);" width="50"
+          height="50">
+      </div>
     </a>
+
   </div>
+
   <ul class="thumbnails">
-    <li class="thumb">
+    <div class="tooltip">
+      <span class="tooltiptext"><%=name%></span>
+      <li class="thumb" onclick="">
         <!--<div id="pointer"></div>-->
-        <img border="0" alt="<%=name%>" title="<%=name%>" src="../assets/images/1.jpg" width="50" height="50" class="thumbimg">
-    </li>
-    
+        <img border="0" alt="<%=name%>" src="../assets/images/<%=imgindex%>.jpg" width="50" height="50"
+          class="thumbimg">
+      </li>
+    </div>
   </ul>
+
+  <!-- TESTING 
+  -->
+
+  <div class="pic">
+    <div class="text">
+      <h3><%=name%></h3>
+      <p><%=description%></p>
+    </div>
+  </div>
 
 </body>
 

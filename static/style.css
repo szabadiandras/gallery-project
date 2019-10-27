@@ -6,17 +6,22 @@ body {
   flex-direction: column;
 }
 
-h1 {
+h1, h3, p {
   font-family: Montserrat, sans-serif;
   align-content: center;
+}
+
+p {
+  margin: 0px;
 }
 
 .container {
   display: flex;
   align-items: center;
-  height: 600px;
-  width: 80%;
+  height: 576;
+  width: 1024px;
   overflow: hidden;
+  border-radius: 15px;
 
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.42);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.42);
@@ -37,11 +42,6 @@ h1 {
   padding: 20px;
 }
 
-.middle {
-  background: grey;
-  flex-grow: 40;
-}
-
 .right {
   background-image: linear-gradient(to bottom, white, rgb(163, 163, 163));
   align-items: center;
@@ -50,21 +50,15 @@ h1 {
   padding: 20px;
 }
 
-.textholder {
-  color: black;
-  height: 100px;
-  width: 100%;
-  align-content: flex-end;
-  justify-content: flex-end;
-}
-
 .thumb {
+  display: flex;
   list-style-type: none;
   background: white;
   height: 75px;
   width: 75px;
   margin: 15px 15px 0 0;
   border-radius: 15px;
+  overflow: hidden;
 
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.42);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.42);
@@ -72,8 +66,8 @@ h1 {
 }
 
 .thumbnails {
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
 }
 
 a:hover {
@@ -107,6 +101,7 @@ a:hover {
   margin: -15px;
 }
 */
+
 li:hover {
   cursor: pointer;
   border: 5px solid darkgrey;
@@ -127,13 +122,92 @@ li {
 
 img {
   width: 100%;
-  height: 100%;
 }
 
 .thumbimg {
-  border-radius: 10px;
+  width: 170%;
+  height: 100%;
 }
 
 .thumbimg:hover{
   filter: invert(10%);
+}
+
+/************Tooltip**************/
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 95%;
+  left: 50%;
+  margin-left: -60px;
+  font-family: Montserrat, sans-serif;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  font-family: Montserrat, sans-serif;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*************TESTING***************/
+
+.pic{
+  height: 200px;
+  width: 400px;
+  background: url("https://www.nika-actief.nl/wp-content/uploads/2016/12/400x200.png") no-repeat;
+}
+
+.text{
+  height: 125;
+  width: 360px;
+  padding: 10px 20px;
+  background: black;
+  opacity:0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.pic:hover .text{
+  display: flex;
+  opacity:0.6;
+  text-align:justify;
+  align-content: flex-end;
+  color:white;
+  font-family: Montserrat, sans-serif;
+}
+/**/
+.middle {
+  display: flex;
+  flex-grow: 40;
+}
+
+.middle:hover {
+  opacity:0.6;
+  text-align:justify;
+  align-content: flex-end;
+  color:white;
+  font-family: Montserrat, sans-serif;
 }
